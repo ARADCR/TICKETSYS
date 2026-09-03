@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUCENT — Café de Especialidad</title>
+  <meta name="description" content="Notas profundas, textura sedosa y la pausa exacta diseñada para apreciar cada instante. El arte sereno del buen café." />
+
+  <!-- Google Fonts: Instrument Sans (400-700) & Newsreader (Italic 400) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap" rel="stylesheet" />
+
+  <script type="module" crossorigin src="/assets/index-BbW_39Rm.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DTwuHko1.css">
+</head>
+<body>
+  <!-- =====================================================================
+       1. HEADER & NAVEGACIÓN PRINCIPAL
+       ===================================================================== -->
+  <header class="site-header" id="site-header">
+    <a href="#hero" class="brand" aria-label="LUCENT — Inicio">LUCENT</a>
+    <nav class="nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="#manifiesto" class="nav-link">Ritual</a></li>
+        <li><a href="#extraccion" class="nav-link">Extracción</a></li>
+        <li><a href="#carta" class="nav-link">Carta</a></li>
+        <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botón Sandwich Móvil -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span class="toggle-bar bar-1"></span>
+      <span class="toggle-bar bar-2"></span>
+    </button>
+  </header>
+
+  <!-- Overlay de Menú Móvil con Apertura Circular Cinemática -->
+  <div class="mobile-menu-overlay" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <nav class="mobile-nav" aria-label="Navegación móvil desplegable">
+        <ul class="mobile-nav-list">
+          <li class="mobile-nav-item">
+            <a href="#manifiesto" class="mobile-nav-link">
+              <span class="m-nav-num">01</span>
+              <span class="m-nav-text">Ritual</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="#extraccion" class="mobile-nav-link">
+              <span class="m-nav-num">02</span>
+              <span class="m-nav-text">Extracción</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="#carta" class="mobile-nav-link">
+              <span class="m-nav-num">03</span>
+              <span class="m-nav-text">La Carta</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="#ubicacion" class="mobile-nav-link">
+              <span class="m-nav-num">04</span>
+              <span class="m-nav-text">Ubicación</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="#contacto" class="mobile-nav-link">
+              <span class="m-nav-num">05</span>
+              <span class="m-nav-text">Contacto</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="mobile-menu-footer">
+        <div class="m-footer-item">
+          <span class="m-footer-label">BARRA PRINCIPAL</span>
+          <span class="m-footer-val">Álvaro Obregón 142, Roma Norte</span>
+        </div>
+        <div class="m-footer-item">
+          <span class="m-footer-label">HORARIOS</span>
+          <span class="m-footer-val">Lun – Dom · 07:30 — 21:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       2. HERO CINEMATOGRÁFICO
+       ===================================================================== -->
+  <section class="hero" id="hero" aria-label="Hero Lucent Café">
+    <!-- Video de fondo en bucle continuo con póster fallback -->
+    <video
+      id="hero-video"
+      class="hero-media"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="/media/coffee-bg.png"
+      aria-hidden="true"
+    >
+      <source src="/media/coffee-loop.mp4" type="video/mp4" />
+      <source src="/media/Espresso_pouring_and_receding_loop_202609021758.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Fade localizado para legibilidad sin oscurecer la pieza -->
+    <div class="edge" aria-hidden="true"></div>
+
+    <!-- Bloque Editorial Principal -->
+    <div class="hero-content">
+      <h1 class="hero-title" id="hero-title">
+        <span class="hero-word title-sans">El arte sereno</span>
+        <span class="hero-word title-serif">del buen café.</span>
+      </h1>
+      <p class="hero-body" id="hero-body">
+        Notas profundas, textura sedosa y la pausa exacta diseñada para apreciar cada instante.
+      </p>
+      <div class="hero-action" id="hero-action">
+        <a href="#manifiesto" class="cta-button magnetic-btn" id="cta-lucent">
+          <span class="btn-text">Descubrir la experiencia</span>
+          <svg class="cta-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6 1.5V10.5M6 10.5L2 6.5M6 10.5L10 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Metadatos de Pie del Hero -->
+    <footer class="hero-footer">
+      <span class="meta-tag">COSECHA DE ORIGEN</span>
+      <span class="meta-sep" aria-hidden="true">/</span>
+      <span class="meta-tag">EXTRACCIÓN ARTESANAL</span>
+    </footer>
+  </section>
+
+  <!-- =====================================================================
+       3. MANIFIESTO CINEMATOGRÁFICO (Revelado palabra por palabra con scroll)
+       ===================================================================== -->
+  <section class="manifesto-section" id="manifiesto" aria-label="El manifiesto del ritual">
+    <div class="manifesto-inner">
+      <span class="section-label">EL RITUAL</span>
+      <h2 class="manifesto-quote" id="manifesto-quote">
+        <span class="m-word">Cada</span>
+        <span class="m-word">gota</span>
+        <span class="m-word">es</span>
+        <span class="m-word">una</span>
+        <span class="m-word m-accent">decisión.</span>
+        <span class="m-word">La</span>
+        <span class="m-word">alquimia</span>
+        <span class="m-word">precisa</span>
+        <span class="m-word">entre</span>
+        <span class="m-word">temperatura,</span>
+        <span class="m-word">tiempo</span>
+        <span class="m-word">y</span>
+        <span class="m-word m-serif">9 bares de presión.</span>
+      </h2>
+      <p class="manifesto-caption">
+        Sin atajos. La extracción perfecta no se apresura; se contempla.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       4. EXTRACCIÓN INTERACTIVA — 3 MOVIMIENTOS TIPOGRÁFICOS FLOTANTES
+          (Canvas Full HD 1080p sticky centrado + tipografía asimétrica con parallax)
+       ===================================================================== -->
+  <section class="extraction-experience" id="extraccion" aria-label="Extracción controlada por scroll">
+    <!-- Sticky Canvas Pinned in Viewport -->
+    <div class="canvas-sticky-wrapper" id="canvas-sticky">
+      <canvas id="sequence-canvas" class="sequence-canvas" aria-hidden="true"></canvas>
+      
+      <!-- Viñetas de gradiente orgánico a los laterales -->
+      <div class="vignette-side vignette-left" aria-hidden="true"></div>
+      <div class="vignette-side vignette-right" aria-hidden="true"></div>
+      <div class="vignette-top" aria-hidden="true"></div>
+      <div class="vignette-bottom" aria-hidden="true"></div>
+    </div>
+
+    <!-- Pista de Scroll con 3 Movimientos Editoriales Asimétricos -->
+    <div class="extraction-track" id="extraction-track">
+      <!-- Movimiento 01: Flanco izquierdo -->
+      <div class="movement-item movement-left" id="movement-1">
+        <div class="movement-num" aria-hidden="true">01</div>
+        <div class="movement-content">
+          <span class="movement-phase">FASE 01 — 93.5 °C</span>
+          <h3 class="movement-title">
+            <span class="mv-sans">Pre-infusión</span>
+            <span class="mv-serif">del grano.</span>
+          </h3>
+          <p class="movement-text">
+            El agua satura la pastilla a baja presión. Los aceites nobles se dilatan y desprenden notas florales y cacao tostado.
+          </p>
+          <div class="movement-metric">
+            <span class="metric-val">2.5</span>
+            <span class="metric-unit">BARES DE PRESIÓN INICIAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Movimiento 02: Flanco derecho -->
+      <div class="movement-item movement-right" id="movement-2">
+        <div class="movement-num" aria-hidden="true">02</div>
+        <div class="movement-content">
+          <span class="movement-phase">FASE 02 — 9.0 BARES</span>
+          <h3 class="movement-title">
+            <span class="mv-sans">La corriente</span>
+            <span class="mv-serif">áurea.</span>
+          </h3>
+          <p class="movement-text">
+            Flujo elástico y continuo que desciende como miel tibia. La emulsión colma el fondo de la cerámica con balance exacto.
+          </p>
+          <div class="movement-metric">
+            <span class="metric-val">1.8</span>
+            <span class="metric-unit">ML/S DE CAUDAL CONTINUO</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Movimiento 03: Flanco izquierdo -->
+      <div class="movement-item movement-left" id="movement-3">
+        <div class="movement-num" aria-hidden="true">03</div>
+        <div class="movement-content">
+          <span class="movement-phase">FASE 03 — 36G EN TAZA</span>
+          <h3 class="movement-title">
+            <span class="mv-sans">La plenitud</span>
+            <span class="mv-serif">y la crema.</span>
+          </h3>
+          <p class="movement-text">
+            La taza alcanza su punto culminante. Una crema densa con vetas atigradas sella la temperatura y garantiza persistencia pura.
+          </p>
+          <div class="movement-metric">
+            <span class="metric-val">100%</span>
+            <span class="metric-unit">EQUILIBRIO ORGANOLÉPTICO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       5. LA CARTA DE BARRA (Menú Real & Precios)
+       ===================================================================== -->
+  <section class="menu-section" id="carta" aria-label="La Carta de Barra Lucent">
+    <div class="section-header-wrap">
+      <span class="section-label">LA CARTA DE BARRA</span>
+      <h2 class="section-title">
+        <span class="title-sans">Nuestra selección</span>
+        <span class="title-serif">del día.</span>
+      </h2>
+      <p class="section-desc">
+        Cafés calibrados cada mañana al gramo y bollería artesanal horneada con masa madre de fermentación lenta.
+      </p>
+
+      <!-- Botones de Acción: Descargar PDF & Compartir Carta -->
+      <div class="menu-actions">
+        <button class="menu-action-btn" id="btn-download-pdf" aria-label="Descargar Carta en PDF">
+          <svg class="action-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span id="pdf-btn-label">Descargar Carta (PDF)</span>
+        </button>
+
+        <button class="menu-action-btn menu-action-secondary" id="btn-share-menu" aria-label="Compartir Carta">
+          <svg class="action-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+          <span id="share-btn-label">Compartir Carta</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="menu-container">
+      <!-- Columna 1: Extracciones de Café -->
+      <div class="menu-column">
+        <h3 class="menu-category-title">Café & Extracciones</h3>
+        <ul class="menu-list">
+          <li class="menu-item" data-image="/media/menu/espresso_doble.jpg" data-title="Espresso Doble" data-price="$3.80">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Espresso Doble</span>
+              <span class="menu-item-dots" aria-hidden="true"></span>
+              <span class="menu-item-price">$3.80</span>
+            </div>
+            <p class="menu-item-desc">Ratio 1:2 de origen único. Notas a cacao amargo y crema densa.</p>
+            <div class="menu-item-mobile-img">
+              <img src="/media/menu/espresso_doble.jpg" alt="Espresso Doble" loading="lazy" />
+            </div>
+          </li>
+          <li class="menu-item" data-image="/media/menu/flat_white.jpg" data-title="Flat White" data-price="$4.90">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Flat White</span>
+              <span class="menu-item-dots" aria-hidden="true"></span>
+              <span class="menu-item-price">$4.90</span>
+            </div>
+            <p class="menu-item-desc">Doble ristretto con microespuma sedosa de leche de granja o avena orgánica.</p>
+            <div class="menu-item-mobile-img">
+              <img src="/media/menu/flat_white.jpg" alt="Flat White" loading="lazy" />
+            </div>
+          </li>
+          <li class="menu-item" data-image="/media/menu/geisha_v60.jpg" data-title="Geisha Los Pozos (V60)" data-price="$6.50">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Geisha Los Pozos (V60 / Filtro)</span>
+              <span class="menu-item-dots" aria-hidden="true"></span>
+              <span class="menu-item-price">$6.50</span>
+            </div>
+            <p class="menu-item-desc">Filtrado manual por goteo. Notas limpias a jazmín silvestre, bergamota y té blanco.</p>
+            <div class="menu-item-mobile-img">
+              <img src="/media/menu/geisha_v60.jpg" alt="Geisha Los Pozos V60" loading="lazy" />
+            </div>
+          </li>
+          <li class="menu-item" data-image="/media/menu/cold_brew_nitro.jpg" data-title="Cold Brew Nitro 18h" data-price="$5.20">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Cold Brew Nitro 18h</span>
+              <span class="menu-item-dots" aria-hidden="true"></span>
+              <span class="menu-item-price">$5.20</span>
+            </div>
+            <p class="menu-item-desc">Maceración lenta en frío infusionada con nitrógeno para una textura aterciopelada.</p>
+            <div class="menu-item-mobile-img">
+              <img src="/media/menu/cold_brew_nitro.jpg" alt="Cold Brew Nitro" loading="lazy" />
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna 2: Panadería de Autor -->
+      <div class="menu-column">
+        <h3 class="menu-category-title">Panadería & Repostería</h3>
+        <ul class="menu-list">
+          <li class="menu-item" data-image="/media/menu/croissant_almond.jpg" data-title="Croissant de Almendras" data-price="$4.60">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Croissant de Mantequilla & Almendras</span>
+              <span class="menu-item-dots" aria-hidden="true"></span>
+              <span class="menu-item-price">$4.60</span>
+            </div>
+            <p class="menu-item-desc">Hojaldrado artesanal con 72h de fermentación y crema de almendra tostada.</p>
+            <div class="menu-item-mobile-img">
+              <img src="/media/menu/croissant_almond.jpg" alt="Croissant de Mantequilla y Almendras" loading="lazy" />
+            </div>
+          </li>
+          <li class="menu-item" data-image="/media/menu/cardamom_bun.jpg" data-title="Kardemummabulle" data-price="$4.20">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Kardemummabulle (Roll de Cardamomo)</span>
+              <span class="menu-item-dots" aria-hidden="true"></span>
+              <span class="menu-item-price">$4.20</span>
+            </div>
+            <p class="menu-item-desc">Receta nórdica tradicional con semillas de cardamomo recién molidas y azúcar moreno.</p>
+            <div class="menu-item-mobile-img">
+              <img src="/media/menu/cardamom_bun.jpg" alt="Kardemummabulle Roll de Cardamomo" loading="lazy" />
+            </div>
+          </li>
+          <li class="menu-item" data-image="/media/menu/ricotta_toast.jpg" data-title="Tostón con Ricotta y Miel" data-price="$6.80">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Tostón de Masa Madre con Ricotta y Miel</span>
+              <span class="menu-item-dots" aria-hidden="true"></span>
+              <span class="menu-item-price">$6.80</span>
+            </div>
+            <p class="menu-item-desc">Rebanada rústica tostada con ricotta fresca, pistachos triturados y miel cruda de flores.</p>
+            <div class="menu-item-mobile-img">
+              <img src="/media/menu/ricotta_toast.jpg" alt="Tostón de Masa Madre con Ricotta y Miel" loading="lazy" />
+            </div>
+          </li>
+          <li class="menu-item" data-image="/media/menu/chocolate_cookie.jpg" data-title="Cookie de Chocolate 70%" data-price="$3.90">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Cookie de Chocolate 70% & Sal Marina</span>
+              <span class="menu-item-dots" aria-hidden="true"></span>
+              <span class="menu-item-price">$3.90</span>
+            </div>
+            <p class="menu-item-desc">Chocolate amargo de origen ecuatoriano con escamas de sal de manantial.</p>
+            <div class="menu-item-mobile-img">
+              <img src="/media/menu/chocolate_cookie.jpg" alt="Cookie de Chocolate 70% y Sal Marina" loading="lazy" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Portal Flotante al Cursor (Desktop Hover Preview) -->
+    <div class="menu-floating-preview" id="menu-floating-preview" aria-hidden="true">
+      <div class="floating-preview-card">
+        <div class="floating-preview-media">
+          <img src="/media/menu/espresso_doble.jpg" alt="Vista previa de café" id="floating-preview-img" class="floating-preview-img" />
+        </div>
+        <div class="floating-preview-meta">
+          <span class="floating-preview-title" id="floating-preview-title">Espresso Doble</span>
+          <span class="floating-preview-price" id="floating-preview-price">$3.80</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       6. LA BARRA & UBICACIÓN (Google Maps en Modo Oscuro)
+       ===================================================================== -->
+  <section class="location-section" id="ubicacion" aria-label="Ubicación y Horarios de la Barra">
+    <div class="section-header-wrap">
+      <span class="section-label">VISÍTANOS EN LA BARRA</span>
+      <h2 class="section-title">
+        <span class="title-sans">El espacio</span>
+        <span class="title-serif">y la barra.</span>
+      </h2>
+      <p class="section-desc">
+        Un refugio sereno de arquitectura sobria donde cada café se prepara a la vista con calma y precisión.
+      </p>
+    </div>
+
+    <div class="location-grid">
+      <!-- Tarjetas de Información Práctica -->
+      <div class="location-info-panel">
+        <div class="info-card">
+          <span class="info-tag">DIRECCIÓN</span>
+          <h3 class="info-title">Av. Álvaro Obregón 142</h3>
+          <p class="info-desc">Col. Roma Norte, Cuauhtémoc, 06700 Ciudad de México, CDMX</p>
+          <a
+            href="https://maps.google.com/?q=Av.+Álvaro+Obregón+142,+Roma+Norte,+Ciudad+de+México"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="map-link-btn"
+          >
+            <span>Cómo llegar en Google Maps</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="info-card">
+          <span class="info-tag">HORARIOS DE BARRA</span>
+          <ul class="hours-list">
+            <li>
+              <span class="day-label">Lunes a Viernes</span>
+              <span class="day-hours">07:30 — 20:00</span>
+            </li>
+            <li>
+              <span class="day-label">Sábados y Domingos</span>
+              <span class="day-hours">08:30 — 21:00</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <span class="info-tag">EXPERIENCIA</span>
+          <p class="info-desc">Molienda a pedido · Barra acústica de madera y hormigón · Estacionamiento para bicicletas · Pet friendly en terraza.</p>
+        </div>
+      </div>
+
+      <!-- Mapa Interactivo de Google Maps (Estilizado en Modo Oscuro) -->
+      <div class="map-container">
+        <iframe
+          class="google-map-iframe"
+          title="Ubicación de Lucent Café en Google Maps"
+          src="https://maps.google.com/maps?q=Av.+%C3%81lvaro+Obreg%C3%B3n+142,+Roma+Norte,+Ciudad+de+M%C3%A9xico&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          allowfullscreen=""
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       7. RESERVA DE MESA & CONTACTO
+       ===================================================================== -->
+  <section class="contact-section" id="contacto" aria-label="Contacto y Reserva de Barra">
+    <div class="contact-container">
+      <div class="contact-header">
+        <span class="section-label">RESERVA DE CATA O VISITA</span>
+        <h2 class="section-title">
+          <span class="title-sans">Reserva tu</span>
+          <span class="title-serif">momento.</span>
+        </h2>
+        <p class="section-desc">
+          Para catas personalizadas, grupos pequeños o simplemente asegurar tu rincón preferido en la barra.
+        </p>
+      </div>
+
+      <form class="contact-form" id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-name" class="form-label">Nombre completo</label>
+            <input type="text" id="contact-name" name="name" required class="form-input" placeholder="Ej. Valeria Montes" />
+          </div>
+          <div class="form-group">
+            <label for="contact-email" class="form-label">Correo electrónico</label>
+            <input type="email" id="contact-email" name="email" required class="form-input" placeholder="valeria@ejemplo.com" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-date" class="form-label">Fecha deseada</label>
+            <input type="date" id="contact-date" name="date" required class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="contact-guests" class="form-label">Personas</label>
+            <select id="contact-guests" name="guests" class="form-input form-select">
+              <option value="1">1 persona (Barra degustación)</option>
+              <option value="2" selected>2 personas</option>
+              <option value="3">3 personas</option>
+              <option value="4">4 personas</option>
+              <option value="5+">5+ personas (Mesa privada)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-message" class="form-label">Notas o preferencias (opcional)</label>
+          <textarea id="contact-message" name="message" rows="3" class="form-input form-textarea" placeholder="Interés en cata guiada, preferencia de orígenes o alergias alimentarias..."></textarea>
+        </div>
+
+        <div class="form-submit-wrap">
+          <button type="submit" class="cta-button cta-primary magnetic-btn" id="contact-submit-btn">
+            <span class="btn-text" id="contact-btn-text">Confirmar Solicitud de Reserva</span>
+            <svg class="cta-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1.5 6H10.5M10.5 6L6.5 2M10.5 6L6.5 10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       8. PIE DE PÁGINA EDITORIAL
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-meta">
+        <span>LUCENT SPECIALTY COFFEE</span>
+        <span class="meta-sep" aria-hidden="true">/</span>
+        <span>ROMA NORTE, CDMX</span>
+        <span class="meta-sep" aria-hidden="true">/</span>
+        <span>2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       9. PLANTILLA EDITORIAL DE ALTA DEFINICIÓN PARA EXPORTACIÓN EN PDF
+       ===================================================================== -->
+  <div id="pdf-export-container" class="pdf-export-container" aria-hidden="true">
+    <div id="pdf-menu-template" class="pdf-menu-sheet">
+      <div class="pdf-inner-frame">
+        <!-- Encabezado con Logo y Metadatos -->
+        <div class="pdf-header">
+          <div class="pdf-brand-wrap">
+            <span class="pdf-brand-logo">LUCENT</span>
+            <span class="pdf-brand-tagline">CAFÉ DE ESPECIALIDAD & TOSTADURÍA</span>
+          </div>
+          <div class="pdf-meta-wrap">
+            <span class="pdf-edition">CARTA DE BARRA · CALIBRADA AL DÍA</span>
+            <span class="pdf-address">Álvaro Obregón 142 · Roma Norte, CDMX</span>
+          </div>
+        </div>
+
+        <div class="pdf-gold-rule"></div>
+
+        <!-- Dos Columnas Estructuradas -->
+        <div class="pdf-menu-grid">
+          <!-- Columna Café -->
+          <div class="pdf-menu-col">
+            <div class="pdf-col-header">
+              <span class="pdf-category-num">01</span>
+              <h3 class="pdf-category-name">Café & Extracciones</h3>
+            </div>
+            
+            <div class="pdf-item">
+              <div class="pdf-item-head">
+                <span class="pdf-item-title">Espresso Doble</span>
+                <span class="pdf-item-leader"></span>
+                <span class="pdf-item-price">$3.80</span>
+              </div>
+              <p class="pdf-item-desc">Ratio 1:2 de origen único. Notas a cacao amargo y crema densa.</p>
+              <span class="pdf-item-origin">Chiapas / Lavado / 1,650 msnm</span>
+            </div>
+
+            <div class="pdf-item">
+              <div class="pdf-item-head">
+                <span class="pdf-item-title">Flat White</span>
+                <span class="pdf-item-leader"></span>
+                <span class="pdf-item-price">$4.90</span>
+              </div>
+              <p class="pdf-item-desc">Doble ristretto con microespuma sedosa de leche de granja o avena orgánica.</p>
+              <span class="pdf-item-origin">Blend de la Casa / 60% Oaxaca 40% Veracruz</span>
+            </div>
+
+            <div class="pdf-item">
+              <div class="pdf-item-head">
+                <span class="pdf-item-title">Geisha Los Pozos (V60 / Filtro)</span>
+                <span class="pdf-item-leader"></span>
+                <span class="pdf-item-price">$6.50</span>
+              </div>
+              <p class="pdf-item-desc">Filtrado manual por goteo. Notas limpias a jazmín silvestre, bergamota y té blanco.</p>
+              <span class="pdf-item-origin">Boquete, Panamá / Proceso Natural Anaeróbico</span>
+            </div>
+
+            <div class="pdf-item">
+              <div class="pdf-item-head">
+                <span class="pdf-item-title">Cold Brew Nitro 18h</span>
+                <span class="pdf-item-leader"></span>
+                <span class="pdf-item-price">$5.20</span>
+              </div>
+              <p class="pdf-item-desc">Maceración lenta en frío infusionada con nitrógeno para textura aterciopelada.</p>
+              <span class="pdf-item-origin">Puebla / Maceración Fría en Barrica de Roble</span>
+            </div>
+          </div>
+
+          <!-- Columna Panadería -->
+          <div class="pdf-menu-col">
+            <div class="pdf-col-header">
+              <span class="pdf-category-num">02</span>
+              <h3 class="pdf-category-name">Panadería & Masa Madre</h3>
+            </div>
+
+            <div class="pdf-item">
+              <div class="pdf-item-head">
+                <span class="pdf-item-title">Croissant de Mantequilla & Almendras</span>
+                <span class="pdf-item-leader"></span>
+                <span class="pdf-item-price">$4.60</span>
+              </div>
+              <p class="pdf-item-desc">Hojaldrado artesanal con 72h de fermentación y crema de almendra tostada.</p>
+              <span class="pdf-item-origin">Mantequilla de Pastura Francesa AOC</span>
+            </div>
+
+            <div class="pdf-item">
+              <div class="pdf-item-head">
+                <span class="pdf-item-title">Kardemummabulle (Roll Cardamomo)</span>
+                <span class="pdf-item-leader"></span>
+                <span class="pdf-item-price">$4.20</span>
+              </div>
+              <p class="pdf-item-desc">Receta nórdica tradicional con semillas de cardamomo recién molidas y azúcar perlada.</p>
+              <span class="pdf-item-origin">Fermentación Lenta 48h / Cardamomo de Guatemala</span>
+            </div>
+
+            <div class="pdf-item">
+              <div class="pdf-item-head">
+                <span class="pdf-item-title">Tostón de Masa Madre con Ricotta & Miel</span>
+                <span class="pdf-item-leader"></span>
+                <span class="pdf-item-price">$6.80</span>
+              </div>
+              <p class="pdf-item-desc">Rebanada rústica tostada con ricotta fresca, pistachos triturados y miel cruda de flores.</p>
+              <span class="pdf-item-origin">Hogaza Campesina de Centeno / Miel de Yucatán</span>
+            </div>
+
+            <div class="pdf-item">
+              <div class="pdf-item-head">
+                <span class="pdf-item-title">Cookie de Chocolate 70% & Sal Marina</span>
+                <span class="pdf-item-leader"></span>
+                <span class="pdf-item-price">$3.90</span>
+              </div>
+              <p class="pdf-item-desc">Chocolate amargo de origen ecuatoriano con escamas de sal de manantial.</p>
+              <span class="pdf-item-origin">Cacao Arriba Nacional 70% / Sal de Colima</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pie del PDF -->
+        <div class="pdf-footer">
+          <div class="pdf-footer-note">
+            <em>Cada grano es calibrado al miligramo. Cada extracción es una pausa consciente.</em>
+          </div>
+          <div class="pdf-footer-coords">
+            <span>lucentcafe.com · @lucent.cafe · Horario: 07:30 — 21:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
